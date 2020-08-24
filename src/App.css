@@ -1,0 +1,35 @@
+@import '~antd/dist/antd.css';
+
+.container {
+    width: 650px;
+    margin: 0 auto;
+    padding-top: 100px;
+}
+
+.filters {
+    float: right;
+}
+.ant-list button {
+    float: right;
+}
+.ant-btn-primary {
+    float: right;
+}
+.ant-list li {
+    margin-bottom: 20px;
+} 
+
+.ant-list .ant-typography
+ {
+    margin-left: 10px;
+}
+
+.ant-form span  {
+    margin-right: 5px;
+}
+
+.ant-input-affix-wrapper {
+    margin-top: 5px;
+}
+
+
