@@ -177,13 +177,9 @@ const App = () => {
   return (
 
   <>
-   
     <div className="container">
       <div className="header">
-       
          <Title>Todo List</Title>
-        
-
         <Form form={form} onFinish={handleAdd}>
           <Form.Item 
             name="itemInput"
@@ -205,12 +201,7 @@ const App = () => {
             </List>
           </Form.Item>
         </Form>
-
-      
-      
-        
       </div>
-
       <div>
           {clearCompletedButton()}
       </div>
