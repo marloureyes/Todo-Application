@@ -1,5 +1,5 @@
 import React from 'react';
-import {Form, Input, Typography, List, Button, Checkbox, Alert} from 'antd';
+import {Form, Input, Typography, List, Button, Checkbox} from 'antd';
 import './App.css';
 import { SmileOutlined } from '@ant-design/icons';
 
@@ -103,11 +103,9 @@ const App = () => {
     setTodoItems(todoItems.filter(todoitem => todoitem.isDone === true ? false : true))
   }
 
-
-
-
-
-  /***********************************                 Edit-State                          */
+  /************************************/
+  /****    Creating Edit States    ****/
+  /************************************/
 
   const [editState, setEditState] = React.useState('');
   const [inputState, setInputState] = React.useState(Boolean);
@@ -130,10 +128,11 @@ const App = () => {
       return true
     }
   }
+
   
-  /***********************************             End of Edit                                   */
-  
-  /***********************************             Filtersssssss                                */
+  /************************************/
+  /**** Creating Filters for Todo  ****/ 
+  /************************************/
   const FilterList = () => {
     let filteredItems = [];
 
@@ -148,12 +147,10 @@ const App = () => {
       case 'All':
         filteredItems = todoItems.map(item => item)
       break;
-
-
+      default: 
+      break;
     }
-  /***********************************             End of Filtersssssss                                */
     return (
-
     filteredItems.map(item => ( 
       
         <li key={item.id}>
@@ -165,17 +162,12 @@ const App = () => {
                     onPressEnter={(e) => handleEditText(item.id,e)} 
                     placeholder={'Edit something here ....    ' + item.value} /> : ''}
         </li>
-        
-      
         )
       )
     )
 
   }
-
-
   return (
-
   <>
     <div className="container">
       <div className="header">
