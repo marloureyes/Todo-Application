@@ -129,10 +129,16 @@ const App = () => {
     }
   }
 
+  const cancelEditText = () => {
+    setInputState(false);
+    setEditState('')
+  };
+
   
   /************************************/
   /**** Creating Filters for Todo  ****/ 
   /************************************/
+  
   const FilterList = () => {
     let filteredItems = [];
 
@@ -158,9 +164,13 @@ const App = () => {
           <Text  onDoubleClick={() => handleDouble(true, item.id)} delete={disableText(item.isDone)}>{item.value}</Text>
           <Button disabled={disableElement()} danger onClick={() => removeItem(item.id)}>x</Button>
           {editState === item.id ? 
-            <Input  id="warning" prefix={<SmileOutlined />} allowClear
-                    onPressEnter={(e) => handleEditText(item.id,e)} 
-                    placeholder={'Edit something here ....    ' + item.value} /> : ''}
+            <div>
+              <Input  id="warning" prefix={<SmileOutlined />} allowClear
+                      onPressEnter={(e) => handleEditText(item.id,e)} 
+                      placeholder={'Edit something here ....    ' + item.value} /> 
+              <Button type='primary' onClick={() => cancelEditText()}>Cancel Edit</Button>
+            </div>
+          : ''}
         </li>
         )
       )
