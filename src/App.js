@@ -1,3 +1,5 @@
+/** @jsx jsx */
+import { jsx, css } from '@emotion/react'
 import React from 'react';
 import {Form, Input, Typography, List, Button, Checkbox, Divider} from 'antd';
 import './App.css';
@@ -134,6 +136,13 @@ const App = () => {
     setEditState('')
   };
 
+  const guideText =  
+    css`
+     font-style: italic;
+     color: #c3c814;
+     font-size: 11px;
+    `
+
   
   /************************************/
   /**** Creating Filters for Todo  ****/ 
@@ -202,6 +211,7 @@ const App = () => {
             <List>
              <FilterList />
             </List>
+           { inputState ? ""  : <Text css={guideText}>***click text to edit***</Text>}
           </Form.Item>
         </Form>
       </div>
