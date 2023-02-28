@@ -1,5 +1,5 @@
 import React from 'react';
-import {Form, Input, Typography, List, Button, Checkbox} from 'antd';
+import {Form, Input, Typography, List, Button, Checkbox, Divider} from 'antd';
 import './App.css';
 import { SmileOutlined } from '@ant-design/icons';
 
@@ -168,6 +168,7 @@ const App = () => {
               <Input  id="warning" prefix={<SmileOutlined />} allowClear
                       onPressEnter={(e) => handleEditText(item.id,e)} 
                       placeholder={'Edit something here ....    ' + item.value} /> 
+              <Divider />
               <Button type='primary' onClick={() => cancelEditText()}>Cancel Edit</Button>
             </div>
           : ''}
