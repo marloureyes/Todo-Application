@@ -17,7 +17,7 @@ import { SmileOutlined } from '@ant-design/icons';
 const { Title , Text} = Typography;
 
 const App = () => {
-  
+  console.log("JAYR BADING");
   const [ item, setItems ] = React.useState(); 
 
   const [ todoItems, setTodoItems ] = React.useState(
